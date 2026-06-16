@@ -18,7 +18,7 @@
 5. В настройках проекта оставьте:
    - Framework Preset: `Other`;
    - Build Command: пусто;
-   - Output Directory: пусто;
+   - Output Directory: `.`;
    - Install Command: пусто.
 6. Нажмите `Deploy`.
 
