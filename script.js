@@ -1,6 +1,5 @@
 const tabs = document.querySelectorAll('.screen-tab[data-target]');
 const panels = document.querySelectorAll('.screen-panel[data-panel]');
-const requestForm = document.querySelector('#request-form');
 
 function activateScreen(target) {
   tabs.forEach((tab) => {
@@ -19,20 +18,8 @@ tabs.forEach((tab) => {
   });
 });
 
-requestForm?.addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  if (!requestForm.checkValidity()) {
-    requestForm.reportValidity();
-    return;
-  }
-
-  requestForm.classList.add('is-submitted');
-  requestForm.reset();
-});
-
 const revealTargets = document.querySelectorAll(
-  '.hero-copy, .hero-device-wrap, .section-heading, .work-card, .showcase, .catalog-copy, .catalog-board article, .module-card, .flow-line article, .complete-card, .complete-list article, .proof-copy, .proof-grid article, .request-form, .request-aside article, .launch-panel, .final-cta, .support-section, .site-footer',
+  '.hero-copy, .hero-device-wrap, .section-heading, .work-card, .showcase, .catalog-copy, .catalog-board article, .module-card, .flow-line article, .complete-card, .complete-list article, .proof-copy, .proof-grid article, .launch-panel, .final-cta, .support-section, .site-footer',
 );
 
 revealTargets.forEach((target) => target.classList.add('reveal'));
